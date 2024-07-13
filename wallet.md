@@ -105,7 +105,7 @@ Sigo las instrucciones del POC
 
 
 
-Intercepto la peticion con burpsuite
+Intercepto la peticion con burpsuite al darle al boton de Guardar.
 ![image](https://github.com/user-attachments/assets/67de6308-4695-4cb3-ae8c-0424656eef3f)
 
 
