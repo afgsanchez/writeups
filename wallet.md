@@ -17,6 +17,7 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.128/0.128/0.128/0.000 ms
     
 ```
+Uso nmap para localizar puertos y servicios abiertos.
 
 ```
 └─# nmap -p- 172.17.0.2 -n -Pn -vvv -sS --min-rate 4000
@@ -41,10 +42,12 @@ Nmap done: 1 IP address (1 host up) scanned in 0.74 seconds
            Raw packets sent: 65536 (2.884MB) | Rcvd: 65536 (2.621MB)
 
 ```
+Tenemos una web en el puerto 80
 
 ![image](https://github.com/user-attachments/assets/eed0fb58-c7fd-447b-b8ff-c0404cbde2f1)
 
 
+Es una simple pagina estatica, pero hay un boton que tiene un enlace. Lo investigo porque el resto de la pagina no tiene nada.
 
 ```
    Manage your subscriptions easily!
@@ -54,19 +57,19 @@ Nmap done: 1 IP address (1 host up) scanned in 0.74 seconds
                         Get A Quote
                       </a>
 ```
+Intento navegar directamente pero no funciona así que decido añadirlo a mi archivo /etc/hosts
 
 ```
 └─# nano /etc/hosts 
-```
 
-```
 127.0.0.1       localhost
 127.0.1.1       kali
 172.17.0.2      panel.wallet.dl
 ```
+Ahora sí.
 
-
-
+Es una aplicacion web que me permite crear una cuenta.
+No conozco la aplicación, así que decido crear una cuenta para averiguar que puedo hacer.
 
 
 Creo una cuenta con datos al azar
