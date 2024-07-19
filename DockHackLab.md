@@ -271,7 +271,7 @@ Vamos a probar:
 En nuestra maquina atacante:
 
 ```
-knock -v localhost 12345 54321 24680 13579
+knock -v 172.17.0.2 12345 54321 24680 13579
 ```
 
 
